@@ -23,3 +23,8 @@ nx.base64ToFile('data:image/gif;base64,R0lGODlhAQABAJECAAAANAAAAP///wAAACH/C1hNU
   console.log(file);
 });
 ```
+
+
+## resources:
+- https://forums.meteor.com/t/base64-convert-back-to-file/34188/3
+- http://www.codeblocq.com/2016/04/Convert-a-base64-string-to-a-file-in-Node/
