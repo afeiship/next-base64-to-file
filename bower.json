@@ -1,0 +1,28 @@
+{
+  "name": "next-base64-to-file",
+  "version": "0.0.1",
+  "description": "Base64 to File for next",
+  "main": "dist/next-base64-to-file.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-base64-to-file",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
