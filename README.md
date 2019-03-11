@@ -18,10 +18,7 @@ import 'next-base64-to-file';
 
 const base64 = 'data:image/gif;base64,R0lAAAAAAEAAQAAAgJUAQA7';
 
-nx.base64ToFile(base64, {
-  name: 'mypic',
-  type: 'image/png'
-}).then(file => {
+nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' }).then(file => {
   console.log(file);
 });
 ```
