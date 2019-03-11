@@ -7,10 +7,10 @@ npm install -S afeiship/next-base64-to-file --registry=https://registry.npm.taob
 ```
 
 ## apis:
-| params    | type        | description                      |
-|-----------|-------------|----------------------------------|
-| inDataUrl | String      | Base64 String                    |
-| inOptions | (inName,inType) | filename & mimeType are optional |
+| params    | type            | description                      |
+|-----------|-----------------|----------------------------------|
+| inDataUrl | String          | Base64 String                    |
+| inOptions | { inName,inType } | filename & mimeType are optional |
 
 ## usage:
 ```js
