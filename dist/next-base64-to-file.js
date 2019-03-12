@@ -14,7 +14,7 @@
         .slice(-8)
     });
     var index = inDataUrl.indexOf('base64,');
-    var buffer = Buffer.from(base64File.slice(index + 7), 'base64');
+    var buffer = Buffer.from(inDataUrl.slice(index + 7), 'base64');
     return new Promise(function(resolve) {
       var file = new File(buffer, options.name, options.type);
       resolve(file);
