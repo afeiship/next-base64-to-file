@@ -25,3 +25,5 @@ const file = nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' });
 ## resources:
 - https://forums.meteor.com/t/base64-convert-back-to-file/34188/3
 - http://www.codeblocq.com/2016/04/Convert-a-base64-string-to-a-file-in-Node/
+- https://blog.csdn.net/qq_34764577/article/details/80423286
+- https://zhuanlan.zhihu.com/p/30938992
