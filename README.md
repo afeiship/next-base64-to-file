@@ -20,7 +20,7 @@ const base64 = 'data:image/png;base64,R0lAAAAAAEAAQAAAgJUAQA7';
 
 const file = nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' });
 
-// File(149) {name: "wxep6xbi", lastModified: 1552352794209, lastModifiedDate: Tue Mar 12 2019 09:06:34 GMT+0800 (China Standard Time), type: "image/png", webkitRelativePath: "", size: 149, …}
+// File(149) {name: "wxep6xbi", lastModified: 1552352794209, type: "image/png", size: 149, …}
 ```
 
 
