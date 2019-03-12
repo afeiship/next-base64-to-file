@@ -16,11 +16,11 @@ npm install -S afeiship/next-base64-to-file --registry=https://registry.npm.taob
 ```js
 import 'next-base64-to-file';
 
-const base64 = 'data:image/gif;base64,R0lAAAAAAEAAQAAAgJUAQA7';
+const base64 = 'data:image/png;base64,R0lAAAAAAEAAQAAAgJUAQA7';
 
-nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' }).then(file => {
-  console.log(file);
-});
+const file = nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' });
+
+// File(149) {name: "wxep6xbi", lastModified: 1552352794209, lastModifiedDate: Tue Mar 12 2019 09:06:34 GMT+0800 (China Standard Time), type: "image/png", webkitRelativePath: "", size: 149, …}
 ```
 
 
