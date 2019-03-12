@@ -4,21 +4,22 @@
 
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
-  var DATA_TYPE_RE = /^data:([^;]+);/;
+  var DATA_TYPE_RE = /:(.*?);/;
 
   nx.base64ToFile = function(inDataUrl, inOptions) {
+    var arr = inDataUrl.split(',');
+    var blobStr = global.atob(arr[1]);
+    var len = blobStr.length;
+    var u8arr = new Uint8Array(len);
     var options = nx.mix(inOptions, {
-      type: inDataUrl.match(DATA_TYPE_RE)[1],
-      name: Math.random()
-        .toString(36)
-        .slice(-8)
+      type: arr[0].match(DATA_TYPE_RE)[1],
+      name: Math.random().toString(36).slice(-8)
     });
-    var index = inDataUrl.indexOf('base64,');
-    var buffer = Buffer.from(inDataUrl.slice(index + 7), 'base64');
-    return new Promise(function(resolve) {
-      var file = new File(buffer, options.name, options.type);
-      resolve(file);
-    });
+
+    while (len--) {
+      u8arr[len] = blobStr.charCodeAt(len);
+    }
+    return new File([u8arr], options.name, { type: options.type });
   };
 
   if (typeof module !== 'undefined' && module.exports) {
