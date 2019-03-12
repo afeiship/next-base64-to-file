@@ -17,9 +17,7 @@ npm install -S afeiship/next-base64-to-file --registry=https://registry.npm.taob
 import 'next-base64-to-file';
 
 const base64 = 'data:image/png;base64,R0lAAAAAAEAAQAAAgJUAQA7';
-
 const file = nx.base64ToFile(base64, { name: 'mypic', type: 'image/png' });
-
 // File(149) {name: "wxep6xbi", lastModified: 1552352794209, type: "image/png", size: 149, …}
 ```
 
