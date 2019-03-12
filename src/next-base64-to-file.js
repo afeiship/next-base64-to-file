@@ -11,10 +11,10 @@
     var blobStr = global.atob(arr[1]);
     var len = blobStr.length;
     var u8arr = new Uint8Array(len);
-    var options = nx.mix(inOptions, {
+    var options = nx.mix({
       type: arr[0].match(DATA_TYPE_RE)[1],
       name: Math.random().toString(36).slice(-8)
-    });
+    }, inOptions);
 
     while (len--) {
       u8arr[len] = blobStr.charCodeAt(len);
